@@ -1,0 +1,53 @@
+﻿using MauiApp1.Modelos;
+using MauiApp1.Services;
+using MauiApp1.Views;
+using System;
+using System.Linq;
+
+namespace MauiApp1.Views
+{
+    public partial class FormularioEdicionPage : ContentPage
+    {
+        private readonly EventoService _servicio;
+        private readonly Evento _evento;
+
+        public FormularioEdicionPage(Evento evento)
+        {
+            InitializeComponent();
+            _servicio = new EventoService();
+            _evento = evento;
+
+            // Cargar datos en los controles
+            tituloEntry.Text = evento.Titulo;
+            descripcionEditor.Text = evento.Descripcion;
+            fechaInicioPicker.Date = evento.FechaInicio.Date;
+            horaInicioPicker.Time = evento.FechaInicio.TimeOfDay;
+            fechaFinPicker.Date = evento.FechaFin.Date;
+            horaFinPicker.Time = evento.FechaFin.TimeOfDay;
+            etiquetasEntry.Text = string.Join(",", evento.Etiquetas);
+        }
+
+        private async void OnGuardarCambiosClicked(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(tituloEntry.Text) ||
+                string.IsNullOrWhiteSpace(descripcionEditor.Text) ||
+                string.IsNullOrWhiteSpace(etiquetasEntry.Text))
+            {
+                await DisplayAlert("Error", "Todos los campos deben estar completos.", "OK");
+                return;
+            }
+
+            _evento.Titulo = tituloEntry.Text;
+            _evento.Descripcion = descripcionEditor.Text;
+            _evento.FechaInicio = fechaInicioPicker.Date + horaInicioPicker.Time;
+            _evento.FechaFin = fechaFinPicker.Date + horaFinPicker.Time;
+            _evento.Etiquetas = etiquetasEntry.Text.Split(',').Select(t => t.Trim()).ToList();
+
+            // Usar el método EditarEvento en lugar de ActualizarEvento
+            _servicio.EditarEvento(_evento.Id, _evento.Titulo, _evento.Descripcion, _evento.FechaInicio, _evento.FechaFin, _evento.Etiquetas);
+
+            await DisplayAlert("Éxito", "Evento actualizado correctamente.", "OK");
+            await Navigation.PopAsync();
+        }
+    }
+}

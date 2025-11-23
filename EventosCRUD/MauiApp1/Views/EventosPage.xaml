@@ -1,0 +1,28 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.Views.EventosPage"
+             Title="Gestión de Eventos">
+
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+
+            <Entry x:Name="tituloEntry" Placeholder="Titulo del evento" />
+            <Editor x:Name="descripcionEditor" Placeholder="Descripción del evento" AutoSize="TextChanges" />
+
+            <Label Text="Fecha y hora de inicio" FontAttributes="Bold" />
+            <DatePicker x:Name="fechaInicioPicker" />
+            <TimePicker x:Name="horaInicioPicker" />
+
+            <Label Text="Fecha y hora de fin" FontAttributes="Bold" />
+            <DatePicker x:Name="fechaFinPicker" />
+            <TimePicker x:Name="horaFinPicker" />
+
+            <Entry x:Name="etiquetasEntry" Placeholder="Etiquetas separadas por coma" />
+
+            <Button Text="Crear Evento" Clicked="OnCrearEventoClicked" />
+            <Button Text="Listar Eventos" Clicked="OnListarEventosClicked" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

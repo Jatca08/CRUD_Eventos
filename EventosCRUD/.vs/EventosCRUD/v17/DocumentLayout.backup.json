@@ -1,0 +1,241 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Jatniel17\\Desktop\\HOY\\EventosCRUD\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{583F0E2D-0D9E-45C8-802D-77AB2A1A540A}|MauiApp1\\MauiApp1.csproj|c:\\users\\jatniel17\\desktop\\hoy\\eventoscrud\\mauiapp1\\services\\eventoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{583F0E2D-0D9E-45C8-802D-77AB2A1A540A}|MauiApp1\\MauiApp1.csproj|solutionrelative:mauiapp1\\services\\eventoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{583F0E2D-0D9E-45C8-802D-77AB2A1A540A}|MauiApp1\\MauiApp1.csproj|c:\\users\\jatniel17\\desktop\\hoy\\eventoscrud\\mauiapp1\\views\\editareventopage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{583F0E2D-0D9E-45C8-802D-77AB2A1A540A}|MauiApp1\\MauiApp1.csproj|solutionrelative:mauiapp1\\views\\editareventopage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{583F0E2D-0D9E-45C8-802D-77AB2A1A540A}|MauiApp1\\MauiApp1.csproj|c:\\users\\jatniel17\\desktop\\hoy\\eventoscrud\\mauiapp1\\appshell.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{583F0E2D-0D9E-45C8-802D-77AB2A1A540A}|MauiApp1\\MauiApp1.csproj|solutionrelative:mauiapp1\\appshell.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{583F0E2D-0D9E-45C8-802D-77AB2A1A540A}|MauiApp1\\MauiApp1.csproj|c:\\users\\jatniel17\\desktop\\hoy\\eventoscrud\\mauiapp1\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{583F0E2D-0D9E-45C8-802D-77AB2A1A540A}|MauiApp1\\MauiApp1.csproj|solutionrelative:mauiapp1\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{583F0E2D-0D9E-45C8-802D-77AB2A1A540A}|MauiApp1\\MauiApp1.csproj|c:\\users\\jatniel17\\desktop\\hoy\\eventoscrud\\mauiapp1\\views\\editareventopage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{583F0E2D-0D9E-45C8-802D-77AB2A1A540A}|MauiApp1\\MauiApp1.csproj|solutionrelative:mauiapp1\\views\\editareventopage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{583F0E2D-0D9E-45C8-802D-77AB2A1A540A}|MauiApp1\\MauiApp1.csproj|c:\\users\\jatniel17\\desktop\\hoy\\eventoscrud\\mauiapp1\\views\\formularioedicionpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{583F0E2D-0D9E-45C8-802D-77AB2A1A540A}|MauiApp1\\MauiApp1.csproj|solutionrelative:mauiapp1\\views\\formularioedicionpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{583F0E2D-0D9E-45C8-802D-77AB2A1A540A}|MauiApp1\\MauiApp1.csproj|c:\\users\\jatniel17\\desktop\\hoy\\eventoscrud\\mauiapp1\\views\\eventospage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{583F0E2D-0D9E-45C8-802D-77AB2A1A540A}|MauiApp1\\MauiApp1.csproj|solutionrelative:mauiapp1\\views\\eventospage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{583F0E2D-0D9E-45C8-802D-77AB2A1A540A}|MauiApp1\\MauiApp1.csproj|c:\\users\\jatniel17\\desktop\\hoy\\eventoscrud\\mauiapp1\\views\\formularioedicionpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{583F0E2D-0D9E-45C8-802D-77AB2A1A540A}|MauiApp1\\MauiApp1.csproj|solutionrelative:mauiapp1\\views\\formularioedicionpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{583F0E2D-0D9E-45C8-802D-77AB2A1A540A}|MauiApp1\\MauiApp1.csproj|c:\\users\\jatniel17\\desktop\\hoy\\eventoscrud\\mauiapp1\\views\\eventospage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{583F0E2D-0D9E-45C8-802D-77AB2A1A540A}|MauiApp1\\MauiApp1.csproj|solutionrelative:mauiapp1\\views\\eventospage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{583F0E2D-0D9E-45C8-802D-77AB2A1A540A}|MauiApp1\\MauiApp1.csproj|c:\\users\\jatniel17\\desktop\\hoy\\eventoscrud\\mauiapp1\\modelos\\evento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{583F0E2D-0D9E-45C8-802D-77AB2A1A540A}|MauiApp1\\MauiApp1.csproj|solutionrelative:mauiapp1\\modelos\\evento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{583F0E2D-0D9E-45C8-802D-77AB2A1A540A}|MauiApp1\\MauiApp1.csproj|c:\\users\\jatniel17\\desktop\\hoy\\eventoscrud\\mauiapp1\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{583F0E2D-0D9E-45C8-802D-77AB2A1A540A}|MauiApp1\\MauiApp1.csproj|solutionrelative:mauiapp1\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{583F0E2D-0D9E-45C8-802D-77AB2A1A540A}|MauiApp1\\MauiApp1.csproj|c:\\users\\jatniel17\\desktop\\hoy\\eventoscrud\\mauiapp1\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{583F0E2D-0D9E-45C8-802D-77AB2A1A540A}|MauiApp1\\MauiApp1.csproj|solutionrelative:mauiapp1\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{583F0E2D-0D9E-45C8-802D-77AB2A1A540A}|MauiApp1\\MauiApp1.csproj|c:\\users\\jatniel17\\desktop\\hoy\\eventoscrud\\mauiapp1\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{583F0E2D-0D9E-45C8-802D-77AB2A1A540A}|MauiApp1\\MauiApp1.csproj|solutionrelative:mauiapp1\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "FormularioEdicionPage.xaml",
+              "DocumentMoniker": "C:\\Users\\Jatniel17\\Desktop\\HOY\\EventosCRUD\\MauiApp1\\Views\\FormularioEdicionPage.xaml",
+              "RelativeDocumentMoniker": "MauiApp1\\Views\\FormularioEdicionPage.xaml",
+              "ToolTip": "C:\\Users\\Jatniel17\\Desktop\\HOY\\EventosCRUD\\MauiApp1\\Views\\FormularioEdicionPage.xaml",
+              "RelativeToolTip": "MauiApp1\\Views\\FormularioEdicionPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-11-23T17:41:05.091Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EditarEventoPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Jatniel17\\Desktop\\HOY\\EventosCRUD\\MauiApp1\\Views\\EditarEventoPage.xaml.cs",
+              "RelativeDocumentMoniker": "MauiApp1\\Views\\EditarEventoPage.xaml.cs",
+              "ToolTip": "C:\\Users\\Jatniel17\\Desktop\\HOY\\EventosCRUD\\MauiApp1\\Views\\EditarEventoPage.xaml.cs",
+              "RelativeToolTip": "MauiApp1\\Views\\EditarEventoPage.xaml.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAowC8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-23T17:40:13.902Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EditarEventoPage.xaml",
+              "DocumentMoniker": "C:\\Users\\Jatniel17\\Desktop\\HOY\\EventosCRUD\\MauiApp1\\Views\\EditarEventoPage.xaml",
+              "RelativeDocumentMoniker": "MauiApp1\\Views\\EditarEventoPage.xaml",
+              "ToolTip": "C:\\Users\\Jatniel17\\Desktop\\HOY\\EventosCRUD\\MauiApp1\\Views\\EditarEventoPage.xaml",
+              "RelativeToolTip": "MauiApp1\\Views\\EditarEventoPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-11-23T17:36:15.538Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AppShell.xaml",
+              "DocumentMoniker": "C:\\Users\\Jatniel17\\Desktop\\HOY\\EventosCRUD\\MauiApp1\\AppShell.xaml",
+              "RelativeDocumentMoniker": "MauiApp1\\AppShell.xaml",
+              "ToolTip": "C:\\Users\\Jatniel17\\Desktop\\HOY\\EventosCRUD\\MauiApp1\\AppShell.xaml",
+              "RelativeToolTip": "MauiApp1\\AppShell.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-11-23T09:01:37.404Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AppShell.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Jatniel17\\Desktop\\HOY\\EventosCRUD\\MauiApp1\\AppShell.xaml.cs",
+              "RelativeDocumentMoniker": "MauiApp1\\AppShell.xaml.cs",
+              "ToolTip": "C:\\Users\\Jatniel17\\Desktop\\HOY\\EventosCRUD\\MauiApp1\\AppShell.xaml.cs",
+              "RelativeToolTip": "MauiApp1\\AppShell.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-23T09:02:03.57Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EventoService.cs",
+              "DocumentMoniker": "C:\\Users\\Jatniel17\\Desktop\\HOY\\EventosCRUD\\MauiApp1\\Services\\EventoService.cs",
+              "RelativeDocumentMoniker": "MauiApp1\\Services\\EventoService.cs",
+              "ToolTip": "C:\\Users\\Jatniel17\\Desktop\\HOY\\EventosCRUD\\MauiApp1\\Services\\EventoService.cs",
+              "RelativeToolTip": "MauiApp1\\Services\\EventoService.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABYAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-23T08:11:35.852Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FormularioEdicionPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Jatniel17\\Desktop\\HOY\\EventosCRUD\\MauiApp1\\Views\\FormularioEdicionPage.xaml.cs",
+              "RelativeDocumentMoniker": "MauiApp1\\Views\\FormularioEdicionPage.xaml.cs",
+              "ToolTip": "C:\\Users\\Jatniel17\\Desktop\\HOY\\EventosCRUD\\MauiApp1\\Views\\FormularioEdicionPage.xaml.cs",
+              "RelativeToolTip": "MauiApp1\\Views\\FormularioEdicionPage.xaml.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAgwBEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-23T17:41:54.705Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "EventosPage.xaml",
+              "DocumentMoniker": "C:\\Users\\Jatniel17\\Desktop\\HOY\\EventosCRUD\\MauiApp1\\Views\\EventosPage.xaml",
+              "RelativeDocumentMoniker": "MauiApp1\\Views\\EventosPage.xaml",
+              "ToolTip": "C:\\Users\\Jatniel17\\Desktop\\HOY\\EventosCRUD\\MauiApp1\\Views\\EventosPage.xaml",
+              "RelativeToolTip": "MauiApp1\\Views\\EventosPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-11-23T08:47:18.664Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "EventosPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Jatniel17\\Desktop\\HOY\\EventosCRUD\\MauiApp1\\Views\\EventosPage.xaml.cs",
+              "RelativeDocumentMoniker": "MauiApp1\\Views\\EventosPage.xaml.cs",
+              "ToolTip": "C:\\Users\\Jatniel17\\Desktop\\HOY\\EventosCRUD\\MauiApp1\\Views\\EventosPage.xaml.cs",
+              "RelativeToolTip": "MauiApp1\\Views\\EventosPage.xaml.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAxwCoAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-23T08:12:26.587Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\Jatniel17\\Desktop\\HOY\\EventosCRUD\\MauiApp1\\App.xaml",
+              "RelativeDocumentMoniker": "MauiApp1\\App.xaml",
+              "ToolTip": "C:\\Users\\Jatniel17\\Desktop\\HOY\\EventosCRUD\\MauiApp1\\App.xaml",
+              "RelativeToolTip": "MauiApp1\\App.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-11-23T08:26:13.979Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "MainPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Jatniel17\\Desktop\\HOY\\EventosCRUD\\MauiApp1\\MainPage.xaml.cs",
+              "RelativeDocumentMoniker": "MauiApp1\\MainPage.xaml.cs",
+              "ToolTip": "C:\\Users\\Jatniel17\\Desktop\\HOY\\EventosCRUD\\MauiApp1\\MainPage.xaml.cs",
+              "RelativeToolTip": "MauiApp1\\MainPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-23T08:07:09.784Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "MainPage.xaml",
+              "DocumentMoniker": "C:\\Users\\Jatniel17\\Desktop\\HOY\\EventosCRUD\\MauiApp1\\MainPage.xaml",
+              "RelativeDocumentMoniker": "MauiApp1\\MainPage.xaml",
+              "ToolTip": "C:\\Users\\Jatniel17\\Desktop\\HOY\\EventosCRUD\\MauiApp1\\MainPage.xaml",
+              "RelativeToolTip": "MauiApp1\\MainPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-11-23T08:07:07.701Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Evento.cs",
+              "DocumentMoniker": "C:\\Users\\Jatniel17\\Desktop\\HOY\\EventosCRUD\\MauiApp1\\Modelos\\Evento.cs",
+              "RelativeDocumentMoniker": "MauiApp1\\Modelos\\Evento.cs",
+              "ToolTip": "C:\\Users\\Jatniel17\\Desktop\\HOY\\EventosCRUD\\MauiApp1\\Modelos\\Evento.cs",
+              "RelativeToolTip": "MauiApp1\\Modelos\\Evento.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-23T08:03:02.733Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

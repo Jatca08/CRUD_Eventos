@@ -1,0 +1,63 @@
+﻿using MauiApp1.Services;
+using MauiApp1.Modelos; // Asegurate que tu clase Evento esté en esta carpeta
+using System.Collections.ObjectModel;
+using Microsoft.Maui.Controls;
+
+namespace MauiApp1.Views
+{
+    public partial class EditarEventoPage : ContentPage
+    {
+        // Declaración del control usado en XAML
+        private CollectionView eventosCollectionView;
+
+        private readonly EventoService _servicio;
+        public ObservableCollection<Evento> Eventos { get; set; }
+
+        public Command<Evento> EditarCommand { get; }
+        public Command<Evento> EliminarCommand { get; }
+
+        public EditarEventoPage()
+        {
+            InitializeComponent();
+            _servicio = new EventoService();
+
+            // Cargar eventos en colección observable
+            Eventos = new ObservableCollection<Evento>(_servicio.ObtenerEventos());
+            eventosCollectionView.ItemsSource = Eventos;
+
+            // Comandos para botones
+            EditarCommand = new Command<Evento>(async (evento) =>
+            {
+                await Navigation.PushAsync(new FormularioEdicionPage(evento));
+            });
+
+            EliminarCommand = new Command<Evento>(async (evento) =>
+            {
+                bool confirmar = await DisplayAlert("Confirmar", $"¿Eliminar evento '{evento.Titulo}'?", "Sí", "No");
+                if (confirmar)
+                {
+                    _servicio.EliminarEvento(evento.Id);
+                    Eventos.Remove(evento);
+                }
+            });
+
+            // Conectar comandos con la vista
+            BindingContext = this;
+        }
+
+        // Implementación simple de InitializeComponent para cargar el XAML en tiempo de ejecución
+        private void InitializeComponent()
+        {
+            Microsoft.Maui.Controls.Xaml.Extensions.LoadFromXaml(this, typeof(EditarEventoPage));
+            // Intentar enlazar el control por nombre tras cargar el XAML
+            try
+            {
+                eventosCollectionView = this.FindByName<CollectionView>("eventosCollectionView");
+            }
+            catch
+            {
+                // No hacemos nada; si no existe el control, la asignación será null y provocará errores en tiempo de ejecución.
+            }
+        }
+    }
+}
