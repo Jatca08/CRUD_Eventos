@@ -10,10 +10,14 @@ namespace MauiApp1.Views
         public EventosPage()
         {
             InitializeComponent();
-            _servicio = new EventoService();
+            /*Se agrega la instancia de evento.cs reemplazando 
+            _servicio = new EventoService(); por ... */
+            _servicio = EventoService.Instancia;
+            //Lo mismo se hara en las otras paginas
+
         }
 
-        
+
 
         private void OnCrearEventoClicked(object sender, EventArgs e)
         {

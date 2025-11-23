@@ -15,7 +15,8 @@ namespace MauiApp1.Views
         public EditarEventoPage()
         {
             InitializeComponent();
-            _servicio = new EventoService();
+            _servicio = EventoService.Instancia;
+
 
             // Cargar eventos en colección observable
             Eventos = new ObservableCollection<Evento>(_servicio.ObtenerEventos());
@@ -42,6 +43,16 @@ namespace MauiApp1.Views
 
             // Conectar comandos con la vista
             BindingContext = this;
+        }
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+
+            Eventos.Clear();
+            foreach (var evento in _servicio.ObtenerEventos())
+            {
+                Eventos.Add(evento);
+            }
         }
 
     }

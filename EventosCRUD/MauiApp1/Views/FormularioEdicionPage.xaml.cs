@@ -22,7 +22,8 @@ namespace MauiApp1.Views
         public FormularioEdicionPage(Evento evento)
         {
             InitializeComponent();
-            _servicio = new EventoService();
+            _servicio = EventoService.Instancia;
+
             _evento = evento;
 
             // Obtener controles por nombre para evitar ambigüedad con miembros generados

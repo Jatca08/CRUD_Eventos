@@ -1028,3 +1028,4 @@ C:\Users\Jatniel17\Desktop\HOY\EventosCRUD\MauiApp1\obj\Debug\net9.0-windows10.0
 C:\Users\Jatniel17\Desktop\HOY\EventosCRUD\MauiApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\qualifiers.txt
 C:\Users\Jatniel17\Desktop\HOY\EventosCRUD\MauiApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\qualifiers.txt.intermediate
 C:\Users\Jatniel17\Desktop\HOY\EventosCRUD\MauiApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\MultipleQualifiersPerDimensionFound.txt
+C:\Users\Jatniel17\Desktop\HOY\EventosCRUD\MauiApp1\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\MauiApp1.sourcelink.json

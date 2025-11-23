@@ -6,6 +6,9 @@ namespace MauiApp1.Services
     {
         private readonly List<Evento> _eventos = new();
         private int _nextId = 1;
+        //instancia compartida, segun entiendo esto ayuda al refrescar pagina para editar eventos, donde la instancia es cambiada en las otras paginas
+        public static EventoService Instancia { get; } = new EventoService();
+
 
         // CREATE
         public Evento CrearEvento(string titulo, string descripcion, DateTime inicio, DateTime fin, List<string> etiquetas)
