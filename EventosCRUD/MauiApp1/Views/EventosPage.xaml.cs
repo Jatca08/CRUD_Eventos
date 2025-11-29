@@ -1,56 +1,63 @@
 ﻿using MauiApp1.Services;
 using MauiApp1.Modelos;
 
+using System.Collections.ObjectModel;
+
 namespace MauiApp1.Views
 {
     public partial class EventosPage : ContentPage
     {
+        public ObservableCollection<Evento> Eventos { get; set; } = new();
         private readonly EventoService _servicio;
 
         public EventosPage()
         {
             InitializeComponent();
-            /*Se agrega la instancia de evento.cs reemplazando 
-            _servicio = new EventoService(); por ... */
+            BindingContext = this;
             _servicio = EventoService.Instancia;
-            //Lo mismo se hara en las otras paginas
 
+            CargarEventos();
         }
 
-
-
-        private void OnCrearEventoClicked(object sender, EventArgs e)
+        private void CargarEventos()
         {
-            if (string.IsNullOrWhiteSpace(tituloEntry.Text) || string.IsNullOrEmpty(descripcionEditor.Text) || string.IsNullOrEmpty(etiquetasEntry.Text))
+            Eventos.Clear();
+            foreach (var evento in _servicio.ObtenerEventos())
+                Eventos.Add(evento);
+        }
+
+        private async void OnAgregarEventoClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new CrearEventoPage(OnEventoCreado));
+        }
+
+        private async void OnEditarEventoClicked(object sender, EventArgs e)
+        {
+            if (sender is Button boton && boton.CommandParameter is Evento evento)
+                await Navigation.PushAsync(new FormularioEdicionPage(evento));
+        }
+
+        private async void OnEliminarEventoClicked(object sender, EventArgs e)
+        {
+            if (sender is Button boton && boton.CommandParameter is Evento evento)
             {
-                DisplayAlert("Error", "El título es obligatorio.", "OK");
-                return;
+                bool confirmar = await DisplayAlert("Confirmar", $"¿Eliminar el evento \"{evento.Titulo}\"?", "Sí", "No");
+                if (confirmar)
+                {
+                    _servicio.EliminarEvento(evento.Id);
+                    CargarEventos();
+                }
             }
-            var titulo = tituloEntry.Text;
-            var descripcion = descripcionEditor.Text;
-            var inicio = fechaInicioPicker.Date + horaInicioPicker.Time;
-            var fin = fechaFinPicker.Date + horaFinPicker.Time;
-            var etiquetas = etiquetasEntry.Text?.Split(',').Select(t => t.Trim()).ToList();
-
-            var nuevoEvento = _servicio.CrearEvento(titulo, descripcion, inicio, fin, etiquetas);
-            DisplayAlert("Éxito", $"Evento '{nuevoEvento.Titulo}' creado con ID {nuevoEvento.Id}", "OK");
-
-            // Reiniciar campos
-            tituloEntry.Text = string.Empty;
-            descripcionEditor.Text = string.Empty;
-            fechaInicioPicker.Date = DateTime.Today;
-            horaInicioPicker.Time = new TimeSpan(0, 0, 0);
-            fechaFinPicker.Date = DateTime.Today;
-            horaFinPicker.Time = new TimeSpan(0, 0, 0);
-            etiquetasEntry.Text = string.Empty;
-
         }
 
-        private void OnListarEventosClicked(object sender, EventArgs e)
+        private void OnEventoCreado(Evento nuevoEvento)
         {
-            var eventos = _servicio.ObtenerEventos();
-            var lista = string.Join("\n", eventos.Select(ev => $"{ev.Id}: {ev.Titulo} ({ev.FechaInicio} - {ev.FechaFin})"));
-            DisplayAlert("Eventos", lista, "OK");
+            Eventos.Add(nuevoEvento);
+        }
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            CargarEventos(); // Refresca la lista al volver desde edición
         }
     }
 }

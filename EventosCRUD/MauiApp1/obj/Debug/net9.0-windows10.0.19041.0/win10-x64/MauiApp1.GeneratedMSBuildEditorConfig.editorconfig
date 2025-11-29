@@ -52,6 +52,18 @@ build_metadata.AdditionalFiles.ManifestResourceName = MauiApp1.Resources.Styles.
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
 
+[C:/Users/Jatniel17/Desktop/HOY/EventosCRUD/MauiApp1/Views/Ajustes.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MauiApp1.Views.Ajustes.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Ajustes.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Ajustes.xaml
+
+[C:/Users/Jatniel17/Desktop/HOY/EventosCRUD/MauiApp1/Views/CrearEventoPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MauiApp1.Views.CrearEventoPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\CrearEventoPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\CrearEventoPage.xaml
+
 [C:/Users/Jatniel17/Desktop/HOY/EventosCRUD/MauiApp1/Views/EditarEventoPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MauiApp1.Views.EditarEventoPage.xaml
@@ -69,3 +81,9 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MauiApp1.Views.FormularioEdicionPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\FormularioEdicionPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\FormularioEdicionPage.xaml
+
+[C:/Users/Jatniel17/Desktop/HOY/EventosCRUD/MauiApp1/Views/PROMPTY.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MauiApp1.Views.PROMPTY.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\PROMPTY.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\PROMPTY.xaml

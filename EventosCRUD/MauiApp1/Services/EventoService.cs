@@ -31,17 +31,17 @@ namespace MauiApp1.Services
         public Evento ObtenerEventoPorId(int id) => _eventos.FirstOrDefault(e => e.Id == id);
 
         // UPDATE
-        public bool EditarEvento(int id, string titulo, string descripcion, DateTime inicio, DateTime fin, List<string> etiquetas)
+        public void EditarEvento(int id, string titulo, string descripcion, DateTime inicio, DateTime fin, List<string> etiquetas)
         {
-            var evento = _eventos.FirstOrDefault(e => e.Id == id);
-            if (evento == null) return false;
-
-            evento.Titulo = titulo;
-            evento.Descripcion = descripcion;
-            evento.FechaInicio = inicio;
-            evento.FechaFin = fin;
-            evento.Etiquetas = etiquetas ?? new List<string>();
-            return true;
+            var e = _eventos.FirstOrDefault(ev => ev.Id == id);
+            if (e != null)
+            {
+                e.Titulo = titulo;
+                e.Descripcion = descripcion;
+                e.FechaInicio = inicio;
+                e.FechaFin = fin;
+                e.Etiquetas = etiquetas;
+            }
         }
 
         // DELETE
