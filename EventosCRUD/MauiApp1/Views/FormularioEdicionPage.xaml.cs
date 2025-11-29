@@ -1,59 +1,87 @@
 using MauiApp1.Modelos;
 using MauiApp1.Services;
 using System;
+using System.Collections.ObjectModel;
 using System.Linq;
+
+
 
 namespace MauiApp1.Views
 {
     public partial class FormularioEdicionPage : ContentPage
     {
-        // Campos locales con nombres distintos a los definidos automáticamente por XAML
-        private Entry _tituloEntry;
-        private Editor _descripcionEditor;
-        private DatePicker _fechaInicioPicker;
-        private TimePicker _horaInicioPicker;
-        private DatePicker _fechaFinPicker;
-        private TimePicker _horaFinPicker;
-        private Entry _etiquetasEntry;
-
         private readonly EventoService _servicio;
         private readonly Evento _evento;
+
+        public ObservableCollection<string> EtiquetasSeleccionadas { get; set; } = new();
+        private List<string> etiquetasDisponibles = new() { "Crear nueva etiqueta...", "Urgente", "Importante", "Personal", "Trabajo" };
+
+        public Command<string> EliminarEtiquetaCommand { get; }
+        public Command<string> EditarEtiquetaCommand { get; }
 
         public FormularioEdicionPage(Evento evento)
         {
             InitializeComponent();
-            _servicio = EventoService.Instancia;
+            BindingContext = this;
 
+            _servicio = EventoService.Instancia;
             _evento = evento;
 
-            // Obtener controles por nombre para evitar ambigüedad con miembros generados
-            _tituloEntry = this.FindByName<Entry>("tituloEntry");
-            _descripcionEditor = this.FindByName<Editor>("descripcionEditor");
-            _fechaInicioPicker = this.FindByName<DatePicker>("fechaInicioPicker");
-            _horaInicioPicker = this.FindByName<TimePicker>("horaInicioPicker");
-            _fechaFinPicker = this.FindByName<DatePicker>("fechaFinPicker");
-            _horaFinPicker = this.FindByName<TimePicker>("horaFinPicker");
-            _etiquetasEntry = this.FindByName<Entry>("etiquetasEntry");
+            EliminarEtiquetaCommand = new Command<string>(async (etiqueta) =>
+            {
+                bool confirmar = await DisplayAlert(
+                    "Confirmar eliminación",
+                    $"¿Deseas eliminar la etiqueta \"{etiqueta}\"?",
+                    "Sí",
+                    "No");
 
-            // Cargar datos en los controles
-            if (_tituloEntry != null) _tituloEntry.Text = evento.Titulo;
-            if (_descripcionEditor != null) _descripcionEditor.Text = evento.Descripcion;
-            if (_fechaInicioPicker != null) _fechaInicioPicker.Date = evento.FechaInicio.Date;
-            if (_horaInicioPicker != null) _horaInicioPicker.Time = evento.FechaInicio.TimeOfDay;
-            if (_fechaFinPicker != null) _fechaFinPicker.Date = evento.FechaFin.Date;
-            if (_horaFinPicker != null) _horaFinPicker.Time = evento.FechaFin.TimeOfDay;
-            if (_etiquetasEntry != null) _etiquetasEntry.Text = string.Join(",", evento.Etiquetas);
+                if (confirmar && EtiquetasSeleccionadas.Contains(etiqueta))
+                    EtiquetasSeleccionadas.Remove(etiqueta);
+            });
+
+
+            // Inicializar comandos
+            
+            EditarEtiquetaCommand = new Command<string>(async (etiqueta) =>
+            {
+                string nuevaEtiqueta = await DisplayPromptAsync("Editar etiqueta", "Modifica el nombre:", initialValue: etiqueta);
+
+                if (!string.IsNullOrWhiteSpace(nuevaEtiqueta))
+                {
+                    int index = EtiquetasSeleccionadas.IndexOf(etiqueta);
+                    if (index >= 0)
+                        EtiquetasSeleccionadas[index] = nuevaEtiqueta;
+
+                    if (!etiquetasDisponibles.Contains(nuevaEtiqueta))
+                        etiquetasDisponibles.Add(nuevaEtiqueta);
+
+                    etiquetasPicker.ItemsSource = null;
+                    etiquetasPicker.ItemsSource = etiquetasDisponibles;
+                }
+            });
+
+            // Cargar datos
+            tituloEntry.Text = evento.Titulo;
+            descripcionEditor.Text = evento.Descripcion;
+            fechaInicioPicker.Date = evento.FechaInicio.Date;
+            horaInicioPicker.Time = evento.FechaInicio.TimeOfDay;
+            fechaFinPicker.Date = evento.FechaFin.Date;
+            horaFinPicker.Time = evento.FechaFin.TimeOfDay;
+
+            etiquetasPicker.ItemsSource = etiquetasDisponibles;
+
+            foreach (var etiqueta in evento.Etiquetas)
+                EtiquetasSeleccionadas.Add(etiqueta);
         }
 
         private async void OnGuardarCambiosClicked(object sender, EventArgs e)
         {
-            var titulo = _tituloEntry?.Text;
-            var descripcion = _descripcionEditor?.Text;
-            var etiquetas = _etiquetasEntry?.Text;
+            var titulo = tituloEntry?.Text;
+            var descripcion = descripcionEditor?.Text;
 
             if (string.IsNullOrWhiteSpace(titulo) ||
                 string.IsNullOrWhiteSpace(descripcion) ||
-                string.IsNullOrWhiteSpace(etiquetas))
+                EtiquetasSeleccionadas.Count == 0)
             {
                 await DisplayAlert("Error", "Todos los campos deben estar completos.", "OK");
                 return;
@@ -61,19 +89,45 @@ namespace MauiApp1.Views
 
             _evento.Titulo = titulo;
             _evento.Descripcion = descripcion;
+            _evento.FechaInicio = fechaInicioPicker.Date + horaInicioPicker.Time;
+            _evento.FechaFin = fechaFinPicker.Date + horaFinPicker.Time;
+            _evento.Etiquetas = EtiquetasSeleccionadas.ToList();
 
-            if (_fechaInicioPicker != null && _horaInicioPicker != null)
-                _evento.FechaInicio = _fechaInicioPicker.Date + _horaInicioPicker.Time;
-            if (_fechaFinPicker != null && _horaFinPicker != null)
-                _evento.FechaFin = _fechaFinPicker.Date + _horaFinPicker.Time;
-
-            _evento.Etiquetas = etiquetas.Split(',').Select(t => t.Trim()).ToList();
-
-            // Usar el método EditarEvento en el servicio
             _servicio.EditarEvento(_evento.Id, _evento.Titulo, _evento.Descripcion, _evento.FechaInicio, _evento.FechaFin, _evento.Etiquetas);
 
             await DisplayAlert("Éxito", "Evento actualizado correctamente.", "OK");
             await Navigation.PopAsync();
+        }
+
+        private void OnEtiquetaSeleccionada(object sender, EventArgs e)
+        {
+            var seleccionada = etiquetasPicker.SelectedItem?.ToString();
+
+            crearEtiquetaPanel.IsVisible = seleccionada == "Crear nueva etiqueta...";
+
+            if (!string.IsNullOrWhiteSpace(seleccionada) &&
+                seleccionada != "Crear nueva etiqueta..." &&
+                !EtiquetasSeleccionadas.Contains(seleccionada))
+            {
+                EtiquetasSeleccionadas.Add(seleccionada);
+            }
+        }
+
+        private void OnAgregarEtiquetaClicked(object sender, EventArgs e)
+        {
+            var nueva = nuevaEtiquetaEntry.Text?.Trim();
+            if (!string.IsNullOrWhiteSpace(nueva))
+            {
+                if (!etiquetasDisponibles.Contains(nueva))
+                    etiquetasDisponibles.Add(nueva);
+
+                if (!EtiquetasSeleccionadas.Contains(nueva))
+                    EtiquetasSeleccionadas.Add(nueva);
+
+                nuevaEtiquetaEntry.Text = string.Empty;
+                etiquetasPicker.ItemsSource = null;
+                etiquetasPicker.ItemsSource = etiquetasDisponibles;
+            }
         }
     }
 }
